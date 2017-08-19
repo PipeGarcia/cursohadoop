@@ -29,6 +29,7 @@ Tomado de: https://hadoop.apache.org/docs/r2.7.3/hadoop-mapreduce-client/hadoop-
 
 >		user@master$ yarn jar wc.jar WordCount hdfs:///datasets/gutenberg-txt-es/*.txt hdfs:///user/<username>/data_out2
 
+```java
     //
     // WordCount.java
     //
@@ -93,3 +94,38 @@ Tomado de: https://hadoop.apache.org/docs/r2.7.3/hadoop-mapreduce-client/hadoop-
         System.exit(job.waitForCompletion(true) ? 0 : 1);
       }
     }
+```
+# (2) WordCount en python
+
+* Hay varias librerias de python para acceder a servicios MapReduce en Hadoop
+
+* Se usará MRJOB (https://pythonhosted.org/mrjob/)
+
+* Se puede emplear una version de python 2.x o 3.x, del sistema (como root) o con un manejador de versiones de node (pyenv o virtualenv).
+
+* Como parte del sistema, se instalará mrjob así:
+
+>		user@master$ sudo yum install python-pip
+>		user@master$ sudo pip install --upgrade pip
+>		user@master$ sudo pip install mrjob
+
+* Si utilizará un manejador de versiones de python, puede ser así:
+
+primero instalar pyenv (https://github.com/pyenv/pyenv-installer)
+
+>		user@master$ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+>		user@master$ pyenv update
+>		user@master$ pyenv install 2.7.13
+>		user@master$ pyenv version 2.7.13
+>		user@master$ pip install mrjob
+
+* Probar mrjob python local:
+
+>		user@master$ cd 02-mapreduce
+>		user@master$ python wordcount-mr.py /datasets/gutenberg-txt-es/1*.txt
+
+* Ejecutar mrjob python en Hadoop con datos en hdfs:
+
+>		user@master$ python wordcount-mr.py hdfs:///datasets/gutenberg-txt-es/*.txt -r hadoop --output-dir hdfs:///user/<username>/data_out1
+
+* el directorio 'data_out1' no puede existir)
