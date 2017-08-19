@@ -38,9 +38,9 @@
 
 * Realizar un programa en Map/Reduce, con hadoop en Python, que permita calcular:
 
-    1. Por acción, dia-menor-valor, día-mayor-valor
-    2. Listado de acciones que siempre han subido o se mantienen estables.
-    3. DIA NEGRO: Saque el día en el que la mayor cantidad de acciones tienen el menor valor de acción (DESPLOME), suponga una inflación independiente del tiempo.
+1. Por acción, dia-menor-valor, día-mayor-valor
+2. Listado de acciones que siempre han subido o se mantienen estables.
+3. DIA NEGRO: Saque el día en el que la mayor cantidad de acciones tienen el menor valor de acción (DESPLOME), suponga una inflación independiente del tiempo.
 
 ## 3. Sistema de evaluación de películas:
 
@@ -60,10 +60,10 @@ Se tiene un conjunto de datos en el cual se evalúan las películas con un ratin
 
 * Realizar un programa en Map/Reduce, con hadoop en Python, que permita calcular:
 
-    1. Número de películas vista por un usuario, valor promedio de calificación
-    2. Día en que más películas se han visto
-    3. Día en que menos películas se han visto
-    4. Número de usuarios que ven una misma película y el rating promedio
-    5. Día en que peor evaluación en promedio han dado los usuarios
-    6. Día en que mejor evaluación han dado los usuarios
-    7. La mejor y peor película evaluada por genero
+1. Número de películas vista por un usuario, valor promedio de calificación
+2. Día en que más películas se han visto
+3. Día en que menos películas se han visto
+4. Número de usuarios que ven una misma película y el rating promedio
+5. Día en que peor evaluación en promedio han dado los usuarios
+6. Día en que mejor evaluación han dado los usuarios
+7. La mejor y peor película evaluada por genero
