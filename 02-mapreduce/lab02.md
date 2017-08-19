@@ -22,9 +22,9 @@
 
 * Realizar un programa en Map/Reduce, con hadoop en Python o Java, que permita calcular:
 
-    1. El salario promedio por Sector Económico (SE)
-    2. El salario promedio por Empleado
-    3. Número de SE por Empleado que ha tenido a lo largo de la estadística
+1. El salario promedio por Sector Económico (SE)
+2. El salario promedio por Empleado
+3. Número de SE por Empleado que ha tenido a lo largo de la estadística
 
 ## 2. Se tiene un conjunto de acciones de la bolsa, en la cual se reporta a diario el valor promedio por acción, la estructura de los datos es:
 
