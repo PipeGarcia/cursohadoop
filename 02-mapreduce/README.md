@@ -29,7 +29,7 @@ Tomado de: https://hadoop.apache.org/docs/r2.7.3/hadoop-mapreduce-client/hadoop-
 
 >		user@master$ yarn jar wc.jar WordCount hdfs:///datasets/gutenberg-txt-es/*.txt hdfs:///user/<username>/data_out2
 
-```java
+``` Java
     //
     // WordCount.java
     //
