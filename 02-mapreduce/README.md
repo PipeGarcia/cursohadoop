@@ -1,10 +1,10 @@
-# Universidad EAFIT
-# Curso Hadoop, 2017-2
-# Profesor: Edwin Montoya M. – emontoya@eafit.edu.co
+## Universidad EAFIT
+## Curso Hadoop, 2017-2
+## Profesor: Edwin Montoya M. – emontoya@eafit.edu.co
 
 # MapReduce
 
-## (1) WordCount en Java
+# (1) WordCount en Java
 
 Tomado de: https://hadoop.apache.org/docs/r2.7.3/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html
 
@@ -16,15 +16,18 @@ Tomado de: https://hadoop.apache.org/docs/r2.7.3/hadoop-mapreduce-client/hadoop-
 
 [script-compilacion-jar](wc-gen-jar.sh)
 
+>		user@master$ cd 02-mapreduce
+>		user@master$ sh wc-gen-jar.sh
+
 ### Para ejecutar:
 
-    $ hadoop jar wc.jar WordCount hdfs:///datasets/gutenberg-txt-es/*.txt hdfs:///user/<username>/data_out1
+>		user@master$ hadoop jar wc.jar WordCount hdfs:///datasets/gutenberg-txt-es/*.txt hdfs:///user/<username>/data_out1
 
 (puede tomar varios minutos)
 
 * el comando hadoop se este abandonando por yarn:
 
-    $ yarn jar wc.jar WordCount hdfs:///datasets/gutenberg-txt-es/*.txt hdfs:///user/<username>/data_out2
+>		user@master$ yarn jar wc.jar WordCount hdfs:///datasets/gutenberg-txt-es/*.txt hdfs:///user/<username>/data_out2
 
     //
     // WordCount.java
