@@ -8,7 +8,7 @@ import org.apache.hadoop.hbase.client.HBaseAdmin;
 
 public class CreateListTables
 {
-  public static void main(String[] args) throws IOException
+  public static void main(String[] args) throws Exception
   {
 
     //content to HBase
