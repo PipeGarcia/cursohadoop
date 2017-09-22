@@ -71,6 +71,6 @@ compilar:
 
 Ejecutar:
 
-      $ java -cp `hadoop classpath`:`hbase classpath` hbase.HBaseCreateTable
+      $ java -cp `hadoop classpath`:`hbase classpath` hbase.HBaseCreateTable <table_name>
 
 # TAREA:
