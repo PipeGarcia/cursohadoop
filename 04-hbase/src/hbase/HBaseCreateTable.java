@@ -19,7 +19,7 @@ public class HBaseCreateTable
     HBaseConfiguration hconfig = new HBaseConfiguration(conf);
     HBaseAdmin hbase_admin = new HBaseAdmin( hconfig );
 
-    HTableDescriptor htable = new HTableDescriptor("Test2");
+    HTableDescriptor htable = new HTableDescriptor(args[1]);
     htable.addFamily( new HColumnDescriptor("id"));
     htable.addFamily( new HColumnDescriptor("Name"));
 
