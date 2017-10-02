@@ -116,7 +116,7 @@ primero instalar pyenv (https://github.com/pyenv/pyenv-installer)
 >		user@master$ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 >		user@master$ pyenv update
 >		user@master$ pyenv install 2.7.13
->		user@master$ pyenv version 2.7.13
+>		user@master$ pyenv local 2.7.13
 >		user@master$ pip install mrjob
 
 * Probar mrjob python local:
@@ -127,5 +127,13 @@ primero instalar pyenv (https://github.com/pyenv/pyenv-installer)
 * Ejecutar mrjob python en Hadoop con datos en hdfs:
 
 >		user@master$ python wordcount-mr.py hdfs:///datasets/gutenberg-txt-es/*.txt -r hadoop --output-dir hdfs:///user/<username>/data_out1
+
+* HORTONWORKS 2.5 SANDBOX (local o en azure): algunas veces puede sacar error de falta de la librearia hadoop-streaming.jar:
+
+ver: (http://wiktorski.github.io/blog/using-mrjob-with-hortonworks-sandbox/)
+
+>   user@master$ export HADOOP_HOME=/usr/hdp/current/hadoop-client
+>   user@master$ cp /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar $HADOOP_HOME
+>   user@master$ python wordcount-mr.py hdfs:///user/<username>/gutenberg/470*.txt -r hadoop --output-dir hdfs:///user/<username>/data_out1 --hadoop-streaming-jar $HADOOP_HOME/hadoop-streaming.jar
 
 * el directorio 'data_out1' no puede existir)
