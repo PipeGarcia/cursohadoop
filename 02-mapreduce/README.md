@@ -128,12 +128,12 @@ primero instalar pyenv (https://github.com/pyenv/pyenv-installer)
 
 >		user@master$ python wordcount-mr.py hdfs:///datasets/gutenberg-txt-es/*.txt -r hadoop --output-dir hdfs:///user/<username>/data_out1
 
-* HORTONWORKS 2.5 SANDBOX (local o en azure): algunas veces puede sacar error de falta de la librearia hadoop-streaming.jar:
+* HORTONWORKS 2.5 SANDBOX (local o en azure), algunas veces puede sacar error de falta de la librearia hadoop-streaming.jar:
 
-ver: (http://wiktorski.github.io/blog/using-mrjob-with-hortonworks-sandbox/)
+* ver: (http://wiktorski.github.io/blog/using-mrjob-with-hortonworks-sandbox/)
 
->   user@master$ export HADOOP_HOME=/usr/hdp/current/hadoop-client
->   user@master$ cp /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar $HADOOP_HOME
->   user@master$ python wordcount-mr.py hdfs:///user/<username>/gutenberg/470*.txt -r hadoop --output-dir hdfs:///user/<username>/data_out1 --hadoop-streaming-jar $HADOOP_HOME/hadoop-streaming.jar
+      user@master$ export HADOOP_HOME=/usr/hdp/current/hadoop-client
+      user@master$ cp /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar $HADOOP_HOME
+      user@master$ python wordcount-mr.py hdfs:///user/<username>/gutenberg/470*.txt -r hadoop --output-dir hdfs:///user/<username>/data_out1 --hadoop-streaming-jar $HADOOP_HOME/hadoop-streaming.jar
 
 * el directorio 'data_out1' no puede existir)
